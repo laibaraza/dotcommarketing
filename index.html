@@ -1,0 +1,836 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <!-- Start of Async Drift Code -->
+    <script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('ad4u8b427t7x');
+    </script>
+    <!-- End of Async Drift Code -->
+	<meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="animate.min.css" rel="stylesheet" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+           font-family: 'Poppins', sans-serif;
+        }
+        /*NAVBAR*/
+        .my-navbar{
+            background:#67e6dc;
+        }
+        .nav-item .nav-link{
+            color:#ffffff;
+            font-size:14px;
+            font-weight:400;
+            letter-spacing:2px;
+            margin:0 10px;
+            text-transform:uppercase;
+        }
+        .dropdown:hover .dropdown-menu{
+            display:block;
+        }
+        .dropdown-menu{
+            border:none;
+        }
+        .dropdown-item{
+            padding:12px 40px 12px 20px;
+            font-size:15px;
+            color:#ffffff;
+            font-weight:400;
+            background-color:#67e6dc;
+            transform-origin:center;
+            animation:rotate 1.5s ease 1; 
+        }
+        @keyframes rotate{
+            0%{
+                transform:perspective(600px) rotateY(90deg);
+                transform-origin:center;
+            }
+            100%{
+                transform:perspective(600px) rotateY(0deg);
+                transform-origin:center;
+            }
+           
+        }
+        .dropdown:nth-child(1){
+            animation-delay:0s;
+        }
+        .dropdown:nth-child(2){
+            animation-delay:1.5s;
+        }
+        .dropdown:nth-child(3){
+            animation-delay:0.5s;
+        }
+        .dropdown:nth-child(4){
+            animation-delay:3s;
+        }
+        .dropdown:nth-child(5){
+            animation-delay:1.5s;
+        }
+        .dropdown:nth-child(6){
+            animation-delay:2.1s;
+        }
+        .navbar-brand{
+            font-family: 'Audiowide', cursive;
+            font-size:20px;
+            color:#1289A7;
+            font-weight:bold;
+        }
+        /*ANIMATED CAROUSEL*/
+        .carousel-item{
+            height:100vh;
+        }
+        .img-box{
+            width:550px;
+            position:relative;
+        }
+        .pic1{
+          width:57%;
+          margin-left:79px;
+        }
+         .pic2{
+         width: 73px;
+    position: absolute;
+    left: 372px;
+    bottom: 50px;
+        }
+         .pic3{
+              width: 66px;
+    position: absolute;
+    left: 106px;
+    bottom: 14px; 
+        }
+         .pic4{
+            width: 67px;
+    position: absolute;
+    right: 454px;
+    top: 38px;
+        }
+         .pic5{
+          width: 60px;
+    position: absolute;
+    right: 128px;
+    bottom: -49px;
+        }
+          .pic6{
+             width: 74px;
+    position: absolute;
+    right: 152px;
+    bottom: 395px;
+        }
+       .carousel-item .row{
+            margin:12% 0;
+        }
+       .carousel-item h1{
+           margin-top:40px;
+          font-weight:bold;
+           font-family: 'Audiowide', cursive;
+           /*color:#01a3a4;*/
+           color:#006266;
+           text-shadow:0 0 20px #7ed6df;
+           filter:brightness(1);
+       }
+       .carousel-item p{
+           margin:30px 0 50px;
+           font-size:13px;
+           color:#01a3a4;
+       }
+       .img-2{
+          width: 46px;
+            position: absolute;
+            left: 517px;
+            top: 215px;
+       }
+       .img-3{
+          width: 43px;
+    position: absolute;
+    left: 64px;
+    bottom: 165px;
+       }
+       .img-4{
+           width: 45px;
+            position: absolute;
+            right: 13px;
+            bottom: 12px;
+       }
+      /*SERVICES*/
+        .services {
+            margin: 75px 0;
+           padding-top: 1px;
+            padding-bottom: 143px;
+            background: url('DOTCOM IMAGES/glowing-facebook-logo-pattern_1379-4912.jpg') fixed;
+            background-size:cover;
+            background-position:center;
+            position:relative;
+        }
+        .services h1{
+           text-align:center;
+             color:#67e6dc;
+             font-family: 'Audiowide', cursive;
+             letter-spacing:2px;
+             margin:100px auto 50px;
+        }
+        .services h1::after{
+            content:'';
+            background:#01a3a4;
+            width:300px;
+            margin:10px auto;
+            height:3px;
+            display:block;
+        }
+        .card-inner{
+            width:350px;
+            height:350px;
+            margin:auto;
+            perspective:1000px;
+            cursor:pointer;
+        }
+        .inner-box{
+            position:relative;
+            width:100%;
+            height:100%;
+            text-align:center;
+            border-radius:10px;
+            transition:transform 1s;
+            transform-style:preserve-3d;
+        }
+        .card-front, .card-back{
+            position:absolute;
+            width:100%;
+            height:100%;
+            backface-visibility:hidden;
+            border-radius:10px;
+        }
+        .card-front {
+            
+            background-position:center;
+            background-size:cover;
+        }
+        .front-1{
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('DOTCOM IMAGES/web.jpg');
+        }
+        .front-2 {
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('DOTCOM IMAGES/search-engine-optimization-online-promotion-smm-manager-cartoon-character-mobile-settings-tools-adjustment-business-platform-website-analysis_335657-394.jpg');
+        }
+        .front-3 {
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('DOTCOM IMAGES/pile-3d-popular-social-media-logos_1379-881.jpg');
+        }
+        span{
+            display:inline-block;
+            width:100px;
+            padding:14px 0;
+            margin-top:160px;
+            border-radius:4px;
+            background:transparent;
+            color:white;
+            transition:transform 1s;
+            font-size:20px;
+            font-weight:500;
+              font-family: 'Audiowide', cursive;
+        }
+        .card-back{
+            background:#3c6382;
+            transform:rotateX(180deg);
+        }
+        .card-inner:hover .inner-box{
+            transform:rotateX(-180deg);
+        }
+       .card-inner:hover span{
+           transform:rotateY(140px);
+       }
+       .card-back p{
+           display:inline-block;
+           color:white;
+           padding-bottom:10px;
+           margin-top:140px;
+           font-size:15px;
+           font-weight:200;
+       }
+       /*DETAILS*/
+       .detail h1{
+           color: #2980b9;
+    /*font-family: 'Audiowide', cursive;*/
+    margin: 100px auto 50px;
+    font-weight: bold;
+    font-size: 57px;
+       }
+       .detail img{
+           width:100%;
+       }
+       .at-item {
+
+  background-color:#ffe672;
+  animation-name: bounce-top;
+  animation-duration: 20.2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+@keyframes bounce-top {
+  0%{
+    -webkit-transform: translateY(-45px);
+    transform: translateY(-45px);
+  }
+  25%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40%{
+    -webkit-transform: translateY(-24px);
+    transform: translateY(-24px);
+  }
+  55%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  65%{
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+  }
+  75%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  82%{
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  87%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  93%{
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/*BLOG POST*/
+        .blog {
+            margin: 120px 0 auto;
+            background: url('DOTCOM IMAGES/showing-tablet-s-blank-screen_155003-21288.jpg') fixed;
+           padding:100px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .blog h1{
+           text-align:center;
+             color:#ffffff;
+             font-family: 'Audiowide', cursive;
+             letter-spacing:2px;
+             margin:100px auto 50px;
+        }
+        .blog h1::after{
+            content:'';
+            background:#01a3a4;
+            width:300px;
+            margin:10px auto;
+            height:3px;
+            display:block;
+        }
+.blog .blogitem{
+    position:relative;
+    overflow:hidden;
+    margin-bottom:25px;
+    padding:0;
+    vertical-align:middle;
+    text-align:center;
+}
+        .blog .blogitem .blog-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0,0,0,0.5);
+            opacity: 0;
+            transition: all ease-in-out 0.4s;
+        }
+         .blog .blogitem:hover .blog-overlay{
+             opacity:1;
+         }
+    .blog .blogitem .blog-overlay .blog-info{
+        padding:140px 0;
+    } 
+    .blog-info h1{
+        color:#ffffff;
+        margin:0;
+    }
+    .blog-info p{
+        color:#7ed6df;
+        margin-top:0;
+        font-size:14px;
+        letter-spacing:1px;
+    }
+    .newsletter {
+        background:#006266;
+        padding-top:5px;
+        height:229px;
+    }
+    .newsletter h2{
+        color:#ffffff;
+        font-weight:600;
+        margin:49px 0;
+    }
+    .newsletter input{
+        background:transparent;
+        outline:none;
+        border:0;
+        text-align:center;
+        color:#ffffff;
+    }
+    .newsletter button{
+        background:transparent;
+            margin-left: 560px;
+            margin-top: -99px;
+    }
+    /*FOOTER*/
+    .footer{
+        padding:100px 20px;
+        background-image: linear-gradient(#12CBC4,#1289A7);
+    }
+    .footer .navbar-brand{
+       
+            font-family: 'Audiowide', cursive;
+            font-size:20px;
+            color:#0a3d62;
+            font-weight:bold;
+        
+    }
+    .footer h4{
+        text-align:left;
+        margin-top:15px;
+        margin-bottom:25px;
+        color:#0a3d62;
+        font-weight:600;
+        font-family: 'Audiowide', cursive;
+    }
+    .footer p{
+        font-size:12px;
+        text-align:justify;
+        padding-right:35px;
+        color:#ffffff;
+        width:100%;
+        text-align:center;
+    }
+    .footer .row .fa{
+        padding-right:20px;
+        font-size:15px;
+    }
+    .footer a{
+        color:#ffffff;
+        font-size:12px;
+    }
+    .footer h3{
+            font-size: 16px;
+    font-weight: 600;
+    color: antiquewhite;
+    margin-bottom: 15px;
+    margin-top: 82px;
+    }
+    .footer .app-logo{
+        margin-top:20px;
+    }
+    .app-logo img{
+        width:140px;
+    }
+    .footer hr{
+        border:none;
+        background:#b5b5b5;
+        height:2px;
+        margin:20px 0;
+    }
+    .hr{
+       text-align:center;
+       font-size:13px;
+    }
+        </style>
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg my-navbar fixed-top">
+            <a class="navbar-brand ml-5" href="Index.html">Dotcom Marketing</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars text-light" aria-hidden="true"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Web Design And Development.html">Web Design & Development</a>
+                            <a class="dropdown-item" href="Media Advertising.html">Paid Advertising</a>
+                            <a class="dropdown-item" href="SEO.html">SEO</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Learn</a>
+                        <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Index.html">Blog</a>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About</a>
+                        <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Testimonial.html">Testimonial</a>
+                            <a class="dropdown-item" href="Team.html">Our Team</a>
+                            <a class="dropdown-item" href="Price.html">Price</a>
+                            <a class="dropdown-item" href="Our Agency.html">Our Agency</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Work
+                        </a>
+                        <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                            
+                            <a class="dropdown-item" href="Logo Design.html">Logo Design</a>
+                        </ul>
+                    </li>
+                </ul>
+                    <a href="Contact Us.html" class="btn btn-info pr-4 pl-4 mr-5 my-sm-0" type="submit">Contact Us</a>
+            </div>
+        </nav>
+    </div>
+
+    <!--ANIMATED CAROUSEL-->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <h1 class="animate__animated animate__backInLeft animate-delay-4s animate__slow">Digital Marketing Agency Leading Your Business On Right Track </h1>
+                          <p class="animate__animated animate__shakeY animate-delay-2s">We are ready to bring innovative ideas to your next project.
+                           We specialize in user experience, web design, SEO and conversion optimization.
+                           We’ve been working with companies and nonprofits of all sizes since 2003.</p>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="img-box">
+                              <img src="DOTCOM IMAGES/Asset-4.png" class="pic1 animate__animated animate__zoomIn animate-delay-1.5s animate__slower" />
+                              <img src="DOTCOM IMAGES/Asset-7.png" class="pic6 animate__animated animate__fadeInLeft animate-delay-4s animate__slow"/>
+                              <img src="DOTCOM IMAGES/Asset-1-8.png" class="pic2 animate__animated animate__fadeInUp animate-delay-3s animate__slow" />
+                              <img src="DOTCOM IMAGES/Man-blue.png" class="pic3 animate__animated animate__fadeInDown animate__delay-1s animate__slow" />
+                              <img src="DOTCOM IMAGES/Man-orange.png" class="pic4 animate__animated animate__fadeInRight animate-delay-4s" />
+                              <img src="DOTCOM IMAGES/Asset-5.png" class="pic5 animate__animated animate__jackInTheBox animate-delay-3s" />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1 class="animate__animated animate__backInLeft animate-delay-1s">Web Design & Digital Marketing</h1>
+                            <p class="animate__animated animate__shakeY animate-delay-3s">
+                                We Plan, Design, Develop, and Deliver Results
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="DOTCOM IMAGES/flat-isometric-vector-design_68094-97.jpg" class="img-1 animate__animated animate__zoomInLeft animate-delay-2s animate__slower" />
+                                <img src="DOTCOM IMAGES/Asset-9.png" class="img-2 animate__animated animate__rollIn animate-delay-3s animate__slow"/>
+                                <img src="DOTCOM IMAGES/Man-blue.png" class="img-3 animate__animated animate__bounceInLeft animate-delay-4s animate__slow"/>
+                                <img src="DOTCOM IMAGES/Asset-1-8.png" class="img-4 animate__animated  animate__backInRight animate-delay-5s animate__slow"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!--SERVICES WE PROVIDE-->
+    <div class="services">
+        <div class="container">
+            <h1>Services We Provide!</h1>
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="card-inner">
+                        <div class="inner-box">
+                            <div class="card-front front-1">
+                                <span>Web Development Services</span>
+                            </div>
+                            <div class="card-back">
+                                <p>Looking for web development company to create smooth functioning, mobile-friendly lead generation 
+                                    website?Dotcom marketing has been getting this job done for clients since 2000</p>
+                                <a href="Web Design And Development.html" class="btn btn-outline-light">Survey  &#8669;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="card-inner">
+                        <div class="inner-box">
+                            <div class="card-front front-2">
+                                <span>SEO (Search Engine Optimization)</span>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    Looking for web development company to create smooth functioning, mobile-friendly lead generation
+                                    website?Dotcom marketing has been getting this job done for clients since 2000
+                                </p>
+                                <a href="SEO.html" class="btn btn-outline-light">Survey  &#8669;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="card-inner">
+                        <div class="inner-box">
+                            <div class="card-front front-3">
+                                <span>Social Media Advertising</span>
+                            </div>
+                            <div class="card-back">
+                                <p>
+                                    Looking for web development company to create smooth functioning, mobile-friendly lead generation
+                                    website?Dotcom marketing has been getting this job done for clients since 2000
+                                </p>
+                                <a href="Media Advertising.html" class="btn btn-outline-light">Survey  &#8669;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--DETAILS-->
+    <div class="detail animate__animated animate__backInRight animate-delay-7s animate__slow">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <img src="DOTCOM IMAGES/seo-web-business-internet-illustration_41786-11.jpg" class="at-item"  />
+                </div>
+                <div class="col-md-6 col-xs-6">
+                    <h1 class="">SEO Solutions to solve our problem</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="animate__animated animate__fadeInTopRight animate-delay-7s animate__slow" >Custom Web Designs Solutions</h1>
+                </div>
+                <div class="col-md-6">
+                    <img src="DOTCOM IMAGES/web design.jpg"  class="at-item" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="DOTCOM IMAGES/tiny-people-sitting-large-speech-bubbles-smartphone-online-message-flat-vector-illustration-social-media-digital-technology_74855-13259.jpg"  class="at-item" />
+
+                </div>
+                <div class="col-md-6">
+                    <h1>Social Media Advertising</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--BLOG POSTS-->
+
+    <div class="blog">
+        <div class="container">
+            <h1>BLOGS!</h1>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="blogitem">
+                        <a href="SEO insider news.html">
+                            <img src="DOTCOM IMAGES/seooo.jpg" class="img-fluid" />
+                            <div class="blog-overlay">
+                                <div class="blog-info">
+                                    <h1>SEO Insider News</h1>
+                                    <p>November 1, 2020</p>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="blogitem">
+                        <a href="Inside SEO.html">
+                            <img src="DOTCOM IMAGES/digital-marketing-seo-photo-concept-idea.jpg" class="img-fluid" />
+                            <div class="blog-overlay">
+                                <div class="blog-info">
+                                    <h1>Inside The SEO Industry</h1>
+                                    <p>March 12, 2020</p>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="blogitem">
+                        <a href="Marketing failed.html">
+                            <img src="DOTCOM IMAGES/digital-marketing-with-icons.jpg" class="img-fluid" />
+                            <div class="blog-overlay">
+                                <div class="blog-info">
+                                    <h1>Why Our Marketing Failed In 2020?</h1>
+                                    <p>September 1, 2020</p>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="blogitem">
+                        <a href="Marketing Specialist.html">
+                            <img src="DOTCOM IMAGES/3d-rendering-tv-with-glowing-telegram-logo_18199-58.jpg" class="img-fluid" />
+                            <div class="blog-overlay">
+                                <div class="blog-info">
+                                    <h1>When You Need A Marketing Specialists</h1>
+                                    <p>November 1, 2020</p>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="blogitem">
+                        <a href="Google ADS.html">
+
+                   <img src="DOTCOM IMAGES/close-up-bar-graph-with-executives-negotiating-background_1098-2528.jpg" class="img-fluid" />
+                           
+                            <div class="blog-overlay">
+                                <div class="blog-info">
+                                    <h1>Why Google Shopping Ads Should Be A Part Of Your Arsenal</h1>
+                                    <p>November 1, 2020</p>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="blogitem">
+                        <a href="Responsive.html">
+                            <img src="DOTCOM IMAGES/services background.jpg" class="img-fluid" />
+                            <div class="blog-overlay">
+                                <div class="blog-info">
+                                    <h1>Responsive Design Or Separate Mobile Website!</h1>
+                                    <p>November 1, 2020</p>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--NEWSLETTER-->
+    <div class="newsletter text-center">
+        <div class="container">
+            <h2>Subscribe to our Newsletter!</h2>
+            <div class="row">
+                <div class="col-md-6 offset-2">
+                    <div class="form-group">
+                        <input type="text" name="name" value="" placeholder="Send your mail here.." class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-outline-primary" type="submit">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FOOTER-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="#" class="navbar-brand">Dotcom Marketing</a>
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios</p>
+                    <div class="app-logo">
+                        <img src="DOTCOM IMAGES/play-store.png" /><img src="DOTCOM IMAGES/app-store.png" />
+                       
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4>Quick Contact</h4>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i>+1 254866448</p>
+                    <p><i class="fa fa-envelope-o" aria-hidden="true"></i>career@marketing.com</p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>1831 Solano Ave, Suite 7586 Berkeley CA 94707</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>About</h4>
+                    <a href="#">Our Team</a><br />
+                    <a href="#">Testimonial</a><br />
+                    <a href="#">Price</a><br />
+                    <a href="#">Our Agency</a><br />
+                </div>
+                <div class="col-md-3">
+                    <h4>Follow Us On</h4>
+                    <p><i class="fa fa-facebook-square" aria-hidden="true"></i>Facebook</p>
+                    <p><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</p>
+                    <p><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</p>
+                </div>
+            </div>
+            <hr />
+            <p class="hr"><i class="fa fa-copyright" aria-hidden="true"></i> 2021, Dotcom Marketing. All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>

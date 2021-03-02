@@ -1,0 +1,1213 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="animate.min.css" rel="stylesheet" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+           font-family: 'Poppins', sans-serif;
+        }
+        /*NAVBAR*/
+        .my-navbar{
+            background:#67e6dc;
+        }
+        .nav-item .nav-link{
+            color:#ffffff;
+            font-size:14px;
+            font-weight:400;
+            letter-spacing:2px;
+            margin:0 10px;
+            text-transform:uppercase;
+        }
+        .dropdown:hover .dropdown-menu{
+            display:block;
+        }
+        .dropdown-menu{
+            border:none;
+        }
+        .dropdown-item{
+            padding:12px 40px 12px 20px;
+            font-size:15px;
+            color:#ffffff;
+            font-weight:400;
+            background-color:#67e6dc;
+            transform-origin:center;
+            animation:rotate 1.5s ease 1; 
+        }
+        @keyframes rotate{
+            0%{
+                transform:perspective(600px) rotateY(90deg);
+                transform-origin:center;
+            }
+            100%{
+                transform:perspective(600px) rotateY(0deg);
+                transform-origin:center;
+            }
+           
+        }
+        .dropdown:nth-child(1){
+            animation-delay:0s;
+        }
+        .dropdown:nth-child(2){
+            animation-delay:1.5s;
+        }
+        .dropdown:nth-child(3){
+            animation-delay:0.5s;
+        }
+        .dropdown:nth-child(4){
+            animation-delay:3s;
+        }
+        .dropdown:nth-child(5){
+            animation-delay:1.5s;
+        }
+        .dropdown:nth-child(6){
+            animation-delay:2.1s;
+        }
+        .navbar-brand{
+            font-family: 'Audiowide', cursive;
+            font-size:20px;
+            color:#1289A7;
+            font-weight:bold;
+        }
+        
+      
+       /*NEWSLETTER*/
+    .newsletter {
+        background:#006266;
+        padding-top:5px;
+        height:229px;
+    }
+    .newsletter h2{
+        color:#ffffff;
+        font-weight:600;
+        margin:49px 0;
+    }
+    .newsletter input{
+        background:transparent;
+        outline:none;
+        border:0;
+        text-align:center;
+        color:#ffffff;
+    }
+    .newsletter button{
+        background:transparent;
+            margin-left: 560px;
+            margin-top: -99px;
+    }
+    /*FOOTER*/
+    .footer{
+        padding:100px 20px;
+        background-image: linear-gradient(#12CBC4,#1289A7);
+    }
+    .footer .navbar-brand{
+       
+            font-family: 'Audiowide', cursive;
+            font-size:20px;
+            color:#0a3d62;
+            font-weight:bold;
+        
+    }
+    .footer h4{
+        text-align:left;
+        margin-top:15px;
+        margin-bottom:25px;
+        color:#0a3d62;
+        font-weight:600;
+        font-family: 'Audiowide', cursive;
+    }
+    .footer p{
+        font-size:12px;
+        text-align:justify;
+        padding-right:35px;
+        color:#ffffff;
+    }
+    .footer .row .fa{
+        padding-right:20px;
+        font-size:15px;
+    }
+    .footer a{
+        color:#ffffff;
+        font-size:12px;
+    }
+    .footer h3{
+            font-size: 16px;
+    font-weight: 600;
+    color: antiquewhite;
+    margin-bottom: 15px;
+    margin-top: 82px;
+    }
+    .footer .app-logo{
+        margin-top:20px;
+    }
+    .app-logo img{
+        width:140px;
+    }
+    .footer hr{
+        border:none;
+        background:#b5b5b5;
+        height:2px;
+        margin:20px 0;
+    }
+    .hr{
+       text-align:center;
+       font-size:13px;
+    }
+    /*TESTIMONIAL*/
+    .blog-detail{
+       background: #01a3a4;
+    margin: 20px auto 50px;
+    padding: 43px;
+    }
+    .blog-detail h2{
+       
+    position: relative;
+    top: 27px;
+    font-weight: 400;
+    color: #ffffff;
+    font-weight: 800;
+    letter-spacing: 4px;
+    font-size: 22px;
+
+    }
+    .blog-detail .breadcrumb{
+        background: #01a3a4;
+        position: relative;
+    top: 27px;
+    left: 118px;
+    margin: 0;
+    padding: 0;
+    width:fit-content;
+    }
+    .blog-detail .breadcrumb a{
+        color:white;
+    }
+    .blog-detail .breadcrumb .active li{
+        color:white;
+    }
+   .blog-description{
+    
+          margin-top: -50px;
+    /* margin-bottom: 97px; */
+    /* padding: 64px; */
+    height: 1384px;
+   }
+   .blog-description h2{
+       margin-top: 76px; */
+    position: relative;
+    padding-top: 54px;
+    font-size: 47px;
+    /* font-weight: 400; */
+    color: #0A3C79;
+    letter-spacing: 3px;
+    font-family: 'Audiowide', cursive;
+   }
+   .blog-description small{
+           color: #b71540;
+   }
+   .blog-description p{
+       
+    margin-top: 24px;
+    color: #130f40;
+    font-style: italic;
+        word-spacing: 5px;
+    font-size: 14px;
+    line-height: 23px;
+   }
+   .blog-description h3{
+      font-size: 29px;
+    font-weight: 700;
+    color: #30336b;
+    letter-spacing: 2px;
+    margin-top: 140px;
+   }
+   .blog-description ul{
+       color: #130f40;
+    font-style: italic;
+    margin-top: 21px;
+    line-height: 34px;
+    font-size: 16px;
+    list-style-type:none;
+   }
+    .blog-description img{
+        width: 100%;
+         position: relative;
+            top: 50px;
+    }
+  .social h3{
+          font-size: 24px;
+    font-weight: 600;
+    line-height: 71px;
+    color: #17c0eb;
+        margin-top: 113px;
+  }
+  .social p{
+      
+    color: #130f40;
+    font-style: italic;
+        word-spacing: 5px;
+    font-size: 14px;
+    line-height: 23px;
+  }
+  .facebook h1{
+          background: linear-gradient(45deg, #3c40c6, transparent);
+    padding: 26px;
+    text-align: center;
+    border-bottom-left-radius: 81px;
+    border-top-right-radius: 81px;
+    color: #ff5252;
+    font-family: 'Audiowide';
+    letter-spacing: 5px;
+    font-weight: bolder;
+  }
+  .facebook p{
+          margin: 71px;
+    font-size: 18px;
+    color: #f53b57
+  }
+        .facebook-back {
+            background: url('DOTCOM IMAGES/pile-3d-facebook-logos_1379-875.jpg') fixed;
+            background-position:center;
+            background-size:cover;
+            position:relative;
+            margin:120px 0;
+            padding:100px;
+        }
+        .facebook-box{
+                margin: 157px 0 auto;
+    
+        }
+        .facebook-box h4{
+            position: relative;
+    top: -135px;
+   
+       color: aliceblue;
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-family: 'Audiowide';
+    text-align: center;
+        }
+        .facebook-box .fa{
+            font-size:100px;
+            position: relative;
+            left: 87px;
+            bottom: -13px;
+            color: #22a6b3;
+        }
+        .facebook-box .card{
+            box-shadow: 0px 2px 16px 4px #ff5e57;
+        }
+        /*INSTAGRAM*/
+        .instagram h1{
+          background: linear-gradient(45deg, #3c40c6, transparent);
+    padding: 26px;
+    text-align: center;
+    border-bottom-left-radius: 81px;
+    border-top-right-radius: 81px;
+    color: #ff5252;
+    font-family: 'Audiowide';
+    letter-spacing: 5px;
+    font-weight: bolder;
+  }
+  .instagram p{
+          margin: 71px;
+    font-size: 18px;
+    color: #f53b57
+  }
+        .instagram-back {
+            background: url('DOTCOM IMAGES/pile-3d-instagram-logos_1379-876.jpg') fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            margin: 120px 0;
+            padding: 100px;
+        }
+        .instagram-box{
+                margin: 157px 0 auto;
+    
+        }
+        .instagram-box h4{
+            position: relative;
+    top: -135px;
+   
+       color: aliceblue;
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-family: 'Audiowide';
+    text-align: center;
+        }
+        .instagram-box .fa{
+            font-size:100px;
+            position: relative;
+            left: 87px;
+            bottom: -13px;
+            color: #22a6b3;
+        }
+        .instagram-box .card{
+            box-shadow: 0px 2px 16px 4px #ff5e57;
+        }
+        /*LINKDEN*/
+         .linkden h1{
+          background: linear-gradient(45deg, #3c40c6, transparent);
+    padding: 26px;
+    text-align: center;
+    border-bottom-left-radius: 81px;
+    border-top-right-radius: 81px;
+    color: #ff5252;
+    font-family: 'Audiowide';
+    letter-spacing: 5px;
+    font-weight: bolder;
+  }
+  .linkden p{
+          margin: 71px;
+    font-size: 18px;
+    color: #f53b57
+  }
+        .linkden-back {
+            background: url('DOTCOM IMAGES/pile-3d-linkedin-logos_1379-4860.jpg') fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            margin: 120px 0;
+            padding: 100px;
+        }
+        .linkden-box{
+                margin: 157px 0 auto;
+    
+        }
+        .linkden-box h4{
+            position: relative;
+    top: -135px;
+   
+       color: aliceblue;
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-family: 'Audiowide';
+    text-align: center;
+        }
+        .linkden-box .fa{
+            font-size:100px;
+            position: relative;
+            left: 87px;
+            bottom: -13px;
+            color: #22a6b3;
+        }
+        .linkden-box .card{
+            box-shadow: 0px 2px 16px 4px #ff5e57;
+        }
+        /*PINTEREST*/
+         .pinterest h1{
+          background: linear-gradient(45deg, #3c40c6, transparent);
+    padding: 26px;
+    text-align: center;
+    border-bottom-left-radius: 81px;
+    border-top-right-radius: 81px;
+    color: #ff5252;
+    font-family: 'Audiowide';
+    letter-spacing: 5px;
+    font-weight: bolder;
+  }
+  .pinterest p{
+          margin: 71px;
+    font-size: 18px;
+    color: #f53b57
+  }
+        .pinterest-back {
+            background: url('DOTCOM IMAGES/pile-3d-pinterest-logos_1379-877.jpg') fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            margin: 120px 0;
+            padding: 100px;
+        }
+        .pinterest-box{
+                margin: 157px 0 auto;
+    
+        }
+        .pinterest-box h4{
+            position: relative;
+    top: -135px;
+   
+       color: aliceblue;
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-family: 'Audiowide';
+    text-align: center;
+        }
+        .pinterest-box .fa{
+            font-size:100px;
+            position: relative;
+            left: 87px;
+            bottom: -13px;
+            color: #22a6b3;
+        }
+        .pinterest-box .card{
+            box-shadow: 0px 2px 16px 4px #ff5e57;
+        }
+        /*TWITTER*/
+        .twitter h1{
+          background: linear-gradient(45deg, #3c40c6, transparent);
+    padding: 26px;
+    text-align: center;
+    border-bottom-left-radius: 81px;
+    border-top-right-radius: 81px;
+    color: #ff5252;
+    font-family: 'Audiowide';
+    letter-spacing: 5px;
+    font-weight: bolder;
+  }
+  .twitter p{
+          margin: 71px;
+    font-size: 18px;
+    color: #f53b57
+  }
+        .twitter-back {
+            background: url('DOTCOM IMAGES/pile-3d-twitter-logos_1379-879.jpg') fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            margin: 120px 0;
+            padding: 100px;
+        }
+        .twitter-box{
+                margin: 157px 0 auto;
+    
+        }
+        .twitter-box h4{
+            position: relative;
+    top: -135px;
+   
+       color: aliceblue;
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-family: 'Audiowide';
+    text-align: center;
+        }
+        .twitter-box .fa{
+            font-size:100px;
+            position: relative;
+            left: 87px;
+            bottom: -13px;
+            color: #22a6b3;
+        }
+        .twitter-box .card{
+            box-shadow: 0px 2px 16px 4px #ff5e57;
+        }
+        /*SNAPCHAT*/
+        .snapchat h1{
+          background: linear-gradient(45deg, #3c40c6, transparent);
+    padding: 26px;
+    text-align: center;
+    border-bottom-left-radius: 81px;
+    border-top-right-radius: 81px;
+    color: #ff5252;
+    font-family: 'Audiowide';
+    letter-spacing: 5px;
+    font-weight: bolder;
+  }
+  .snapchat p{
+          margin: 71px;
+    font-size: 18px;
+    color: #f53b57
+  }
+        .snapchat-back {
+            background: url('DOTCOM IMAGES/pile-3d-snapchat-logos_1379-878.jpg') fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            margin: 120px 0;
+            padding: 100px;
+        }
+        .snapchat-box{
+                margin: 157px 0 auto;
+    
+        }
+        .snapchat-box h4{
+            position: relative;
+    top: -135px;
+   
+       color: aliceblue;
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-family: 'Audiowide';
+    text-align: center;
+        }
+        .snapchat-box .fa{
+            font-size:100px;
+            position: relative;
+            left: 87px;
+            bottom: -13px;
+            color: #22a6b3;
+        }
+        .snapchat-box .card{
+            box-shadow: 0px 2px 16px 4px #ff5e57;
+        }
+        /*YOUTUBE*/
+
+        .youtube h1{
+          background: linear-gradient(45deg, #3c40c6, transparent);
+    padding: 26px;
+    text-align: center;
+    border-bottom-left-radius: 81px;
+    border-top-right-radius: 81px;
+    color: #ff5252;
+    font-family: 'Audiowide';
+    letter-spacing: 5px;
+    font-weight: bolder;
+  }
+  .youtube p{
+          margin: 71px;
+    font-size: 18px;
+    color: #f53b57
+  }
+        .youtube-back {
+            background: url('DOTCOM IMAGES/pile-3d-play-button-logos_1379-880.jpg') fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            margin: 120px 0;
+            padding: 100px;
+        }
+        .youtube-box{
+                margin: 157px 0 auto;
+    
+        }
+        .youtube-box h4{
+            position: relative;
+    top: -135px;
+   
+       color: aliceblue;
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-family: 'Audiowide';
+    text-align: center;
+        }
+        .youtube-box .fa{
+            font-size:100px;
+            position: relative;
+            left: 87px;
+            bottom: -13px;
+            color: #22a6b3;
+        }
+        .youtube-box .card{
+            box-shadow: 0px 2px 16px 4px #ff5e57;
+        }
+        .b-Mar{margin-bottom:20px;}
+        .w-100 {
+            width: 100% !important;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg my-navbar fixed-top">
+            <a class="navbar-brand ml-5" href="Index.html">Dotcom Marketing</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars text-light" aria-hidden="true"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Web Design And Development.html">Web Design & Development</a>
+                            <a class="dropdown-item" href="Media Advertising.html">Paid Advertising</a>
+                            <a class="dropdown-item" href="SEO.html">SEO</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Learn</a>
+                        <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Index.html">Blog</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About</a>
+                        <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Testimonial.html">Testimonial</a>
+                            <a class="dropdown-item" href="Team.html">Our Team</a>
+                            <a class="dropdown-item" href="Price.html">Price</a>
+                            <a class="dropdown-item" href="Our Agency.html">Our Agency</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Work
+                        </a>
+                        <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Logo Design.html">Logo Design</a>
+                        </ul>
+                    </li>
+                </ul>
+                    <a href="Contact Us.html" class="btn btn-info pr-4 pl-4 mr-5 my-sm-0" type="submit">Contact Us</a>
+            </div>
+        </nav>
+    </div>
+
+   <!--BLOG DETAILS-->
+    <div class="blog-detail">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Social Media Advertising</h2>
+                </div>
+                <div class="col-md-6">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Services</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Social Media Advertising</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <h3>MAKE SOCIAL MEDIA ADVERTISING A PRIORITY</h3>
+                    <p>Social media advertising can be one of the fastest ways to propel your business to the top.
+                     Whether you’re a dog bowtie e-commerce site (please tell us that’s a real thing) 
+                    or a multinational B2B tech company,
+                     social media advertising can help you bring in purchases, leads, and boost brand awareness.</p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <img src="DOTCOM IMAGES/tiny-people-sitting-large-speech-bubbles-smartphone-online-message-flat-vector-illustration-social-media-digital-technology_74855-13259.jpg" class="img-fluid"/>
+                </div>
+                
+            </div>
+          
+        </div>
+    </div>
+    
+    <div class="facebook">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h1>FACEBOOK</h1>
+                    <p>Facebook is the largest social media platform around. With over 1 billion active users (and counting!) 
+                    and an ever-growing advertising platform,
+                     Facebook advertising could be integral to your company's social media advertising strategy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  <div class="facebook-back">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 col-sm-12">
+                 <div class="facebook-box">
+                     <h4>Why Advertise On Facebook?</h4>
+                     <div class="row">
+                         
+                         <div class="col-md-3 col-sm-6 offset-3">
+                             <div class="card b-Mar" style="width: 100%;">
+                                 <i class="fa fa-bullseye" aria-hidden="true"></i>
+                                 <div class="card-body">
+                                     <p class="card-text">Facebook offers extensive demographic targeting.</p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-md-3 col-sm-6">
+                             <div class="card b-Mar" style="width: 100%;">
+                                 <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                 <div class="card-body">
+                                     <p class="card-text">Facebook offers extensive demographic targeting.</p>
+                                 </div>
+                             </div>
+                         </div>
+                         </div>
+                     <div class="row">
+                         <div class="col-md-3 col-sm-6 offset-3">
+                             <div class="card b-Mar" style="width: 100%;">
+                                 <i class="fa fa-eye" aria-hidden="true"></i>
+                                 <div class="card-body">
+                                     <p class="card-text">Facebook offers extensive demographic targeting.</p>
+                                 </div>
+                             </div>
+                         </div>
+
+                         <div class="col-md-3 col-sm-6">
+                             <div class="card b-Mar" style="width: 100%;">
+                                 <i class="fa fa-code" aria-hidden="true"></i>
+                                 <div class="card-body">
+                                     <p class="card-text">Facebook offers extensive demographic targeting.</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                         </div>
+                     </div>
+                 </div>
+          </div>
+      </div>
+ 
+
+                 
+    <!--INSTAGRAM-->
+    <div class="instagram">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h1>INSTAGRAM</h1>
+                    <p>
+                        No, Instagram isn't just for snapping pictures of your brunch and making your friends jealous.
+                         With a quickly expanding user base and a market that isn't oversaturated
+                         why not consider advertising your business on Instagram?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="instagram-back">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="instagram-box">
+                        <h4>Why Advertise On Instagram?</h4>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width: 100%;">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p style="font-size:14px" class="card-text">Instagram uses the Facebook advertising platform.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width: 100%;">
+                                    <i class="fa fa-adn" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p style="font-size:14px" class="card-text">Instagram promotes a seamless, engaging and experience for users.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width: 100%;">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p style="font-size:14px" class="card-text">Instagram ads are image-based, ideal for B2C and e-commerce companies expanding to new audiences.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width: 100%;">
+                                    <i class="fa fa-users" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p style="font-size:14px" class="card-text">Instagram advertising is always expanding to new audiences.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <!--LINKDEN-->
+    <div class="linkden">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h1>LINKEDIN</h1>
+                    <p>
+                        With over 400 million users (and who knows how many photos of people in blazers),
+                         Linkedln isn't just an expansive professional network or another way to creep on old friends from high school.
+                         Because Linkedln has users with updated, comprehensive profiles, detailed targeting options,
+                         and a variety of ad campaign options, your business could seriously benefit from advertising on Linkedln.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="linkden-back">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="linkden-box">
+                        <h4>WHY ADVERTISE ON LINKEDIN?</h4>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Linkedln has expansive targeting options.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Linkedln offers a wide variety of ad campaign structures and formats.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Linkedln allows you to choose between CPC or CPM.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-users" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Linkedln advertising is perfect for B2B companies.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--PINTEREST-->
+
+    <div class="pinterest">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h1>PINTEREST</h1>
+                    <p>
+                        Pinterest can be so much more than a haven for crockpot recipes or chunky knitting patterns—it
+                         can be a valuable advertising channel for your business, too. Because Pinterest advertising
+                         can drive high-value orders and qualified visitors, it's 
+                        time to stop putting a pin in it and think seriously about how Promoted Pins could benefit your business.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pinterest-back">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="pinterest-box">
+                        <h4>WHY ADVERTISE ON PINTEREST?</h4>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Pinterest Promoted Pins can target three types of marketing goals:<br /> awareness, traffic, and engagement.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-map-pin" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Pinterest can target by keyword, location, gender, language, and<br /> device.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Pinterest Promoted Pins aren't just ads—they're content.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Pinterest advertising is great for e-commerce companies.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--TWITTER-->
+
+    <div class="twitter">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h1>TWITTER</h1>
+                    <p>
+                        Twitter's focus on real-time events, trending topics, and bridging the engagement gap makes 
+                        it an incredibly unique social media advertising channel. 
+                        It's great for B2B, B2C, e-commerce businesses, brand awareness, and everything in between.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="twitter-back">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="twitter-box">
+                        <h4>WHY ADVERTISE ON TWITTER?</h4>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Twitter advertising offers a wide variety of campaigns to suit your<br /> goals.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-bullseye" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Advertising on Twitter gives you distinctive targeting options.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 offset-4">
+                                <div class="card" style="width: 18rem;">
+                                    <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Twitter ads can include photos,<br /> Vines, and GIFs.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                <!--SNAPCHAT-->
+    <div class="snapchat">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h1>SNAPCHAT</h1>
+                    <p>
+                        187 million people use Snapchat every single day. Approximately 20% of that number use the dog face filter.
+                         (Okay, the first stat is real. The second stat is a guess.) Snapchat is a highly engaging and addictive app
+                         that opened up its advertising platform to all. 
+                        If you haven’t tested Snapchat ads for your brand, it’s time to start.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="snapchat-back">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="snapchat-box">
+                        <h4>WHY ADVERTISE ON SNAPCHAT?</h4>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-users" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">40% of Snapchat users only use Snapchat on a given day, so it’s a<br /> loyal audience</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">The audience is incredibly engaged, with the average visitor checking the  app 25 times a day</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Snapchat’s user base is younger, which is great for brands trying to reach that generation</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Snapchat ads are highly interactive, creative, and engaging</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--YOUTUBE-->
+    <div class="youtube">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h1>YOUTUBE</h1>
+                    <p>
+                        YouTube is especially 
+                        important to users under the age of 35 and is often used to decide between competing products.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="youtube-back">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="youtube-box">
+                        <h4>WHY ADVERTISE ON YOUTUBE?</h4>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Users are spending more time watching videos, tv shows, and movies on YouTube.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-money" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Often cheaper cost per click than Google Search.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">Opportunity to engage both new and returning audiences with compelling video content, ranging from 6 second clips to 5-minute+ videos. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 offset-2">
+                                <div class="card b-Mar" style="width:100%;">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    <div class="card-body">
+                                        <p class="card-text">YouTube allows for much more granular and insightful data about user audiences, </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!--NEWSLETTER-->
+    <div class="newsletter text-center">
+        <div class="container">
+            <h2>Subscribe to our Newsletter!</h2>
+            <div class="row">
+                <div class="col-md-6 offset-2">
+                    <div class="form-group">
+                        <input type="text" name="name" value="" placeholder="Send your mail here.." class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-outline-primary" type="submit">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FOOTER-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="#" class="navbar-brand">Dotcom Marketing</a>
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios</p>
+                    <div class="app-logo">
+                        <img src="DOTCOM IMAGES/play-store.png" /><img src="DOTCOM IMAGES/app-store.png" />
+                       
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4>Quick Contact</h4>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i>+1 254866448</p>
+                    <p><i class="fa fa-envelope-o" aria-hidden="true"></i>career@marketing.com</p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>1831 Solano Ave, Suite 7586 Berkeley CA 94707</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>About</h4>
+                    <a href="#">Our Team</a><br />
+                    <a href="#">Testimonial</a><br />
+                    <a href="#">Price</a><br />
+                    <a href="#">Our Agency</a><br />
+                </div>
+                <div class="col-md-3">
+                    <h4>Follow Us On</h4>
+                    <p><i class="fa fa-facebook-square" aria-hidden="true"></i>Facebook</p>
+                    <p><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</p>
+                    <p><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</p>
+                </div>
+            </div>
+            <hr />
+            <p class="hr"><i class="fa fa-copyright" aria-hidden="true"></i> 2021, Dotcom Marketing. All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>
